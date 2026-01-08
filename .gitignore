@@ -1,0 +1,23 @@
+# Environment
+.env
+.env.local
+
+# Data (Generated/Private)
+data/
+!data/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# Logs
+*.log
+server_debug.log
+
+# OS
+.DS_Store
+Thumbs.db
+

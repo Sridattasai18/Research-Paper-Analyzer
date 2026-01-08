@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research analyzer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container" id="mainContainer">
+        <header>
+            <h1>Research analyzer</h1>
+            <p id="subheading">Upload a research paper to start an AI-powered analysis.</p>
+        </header>
+
+        <div id="uploadView" class="view">
+            <div class="upload-wrapper">
+                <div class="drop-zone" id="dropZone" onclick="document.getElementById('pdfFile').click()">
+                    <span class="upload-icon">📄</span>
+                    <p>Drag & drop your PDF here, or <strong>click to browse</strong></p>
+                    <input type="file" id="pdfFile" accept="application/pdf" hidden>
+                </div>
+                <div id="status"></div>
+            </div>
+        </div>
+
+        <div id="chatView" class="view" style="display:none;">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h3>Research Assistant</h3>
+                    <button class="btn btn-secondary" onclick="showUpload()">Reset</button>
+                </div>
+                <div id="chatBox" class="chat-box">
+                    <div class="message ai">
+                        <span class="message-label">Research AI</span>
+                        <div>Hello! I've indexed your paper. What would you like to know about it?</div>
+                    </div>
+                </div>
+                <div class="input-section">
+                    <input type="text" id="question" placeholder="Ask a question about the paper..." autocomplete="off">
+                    <button class="btn" onclick="askQuestion()" id="sendBtn">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+</html>

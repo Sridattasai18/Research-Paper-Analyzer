@@ -1,6 +1,8 @@
 # 📄 Research Paper Analyzer - Gemini RAG System
 
-An intelligent, professional-grade Research Assistant that uses **Retrieval-Augmented Generation (RAG)** to analyze academic papers. Built with a focus on speed, precision, and a premium user experience.
+![Banner](assets/banner.png)
+
+An intelligent, professional-grade Research Assistant that uses **Retrieval-Augmented Generation (RAG)** to analyze academic papers with human-like understanding. Built with a focus on speed, precision, and a premium user experience.
 
 ![Gemini AI](https://img.shields.io/badge/Gemini%20AI-1.5%20Flash-blue?style=flat-square&logo=google-gemini)
 ![Python](https://img.shields.io/badge/Python-3.9+-yellow?style=flat-square&logo=python)
@@ -82,10 +84,28 @@ graph TD
     I --> J[Formatted Pro UI Output]
 ```
 
-### Engineering Highlights:
-- **Chunking**: 500-token chunks with 75-token overlap for precision.
-- **Model**: `gemini-1.5-flash` for high-speed, cost-effective reasoning.
-- **Data Security**: `.gitignore` is pre-configured to ensure your API keys and private PDFs never touch GitHub.
+## 📁 Project Structure
+
+```text
+rag/
+├── app.py                # Main Flask application entry point
+├── config.py             # System-wide configuration and API setup
+├── routes/
+│   ├── ingestion.py      # PDF processing and indexing endpoints
+│   └── query.py          # RAG query and debug endpoints
+├── services/
+│   ├── pdf_loader.py     # Advanced PDF text extraction
+│   ├── chunker.py        # Smart text chunking with section detection
+│   ├── embeddings.py     # Local vector generation (no API needed)
+│   ├── vector_store.py   # FAISS vector management
+│   └── rag_pipeline.py   # Orchestration of Retrieval + Gemini LLM
+├── templates/
+│   └── index.html        # Modern SPA Frontend
+├── static/
+│   ├── app.js            # Frontend logic & Markdown rendering
+│   └── style.css         # Premium Glassmorphism UI styles
+└── assets/               # Branding and visuals
+```
 
 ---
 

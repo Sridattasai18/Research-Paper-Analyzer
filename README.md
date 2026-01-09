@@ -1,6 +1,6 @@
 # 📄 Research Paper Analyzer - Gemini RAG System
 
-![Banner](assets/banner.png)
+
 
 An intelligent, professional-grade Research Assistant that uses **Retrieval-Augmented Generation (RAG)** to analyze academic papers with human-like understanding. Built with a focus on speed, precision, and a premium user experience.
 
